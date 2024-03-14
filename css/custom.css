@@ -1,0 +1,31 @@
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.list-numbers{
+    list-style: none;
+    counter-reset: my_counter 0;
+}
+.list-numbers li{
+    counter-increment: my_counter 1;
+    position: relative;
+}
+.list-numbers li::before{
+    content: counter(my_counter) ". ";
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #da3333;
+}
+.list-numbers li h5, .list-numbers li p{
+    padding-left: 55px;
+}
