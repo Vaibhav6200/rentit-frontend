@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' integrity='sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==' crossorigin='anonymous' referrerpolicy='no-referrer' />
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' integrity='sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB' crossorigin='anonymous'>
+  <link rel='stylesheet' href='css/styles.css'>
+  <title> </title>
+  <style>
+    .question-card {
+      width: 400px;
+      height: 266px;
+      background-color: #F7FAF7;
+      border-radius: 15px;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .question-card:hover {
+      transform: translateY(-5px);
+      border-color: #DC3545;
+      /* Add border color on hover */
+    }
+
+    .question-card.selected {
+      border-color: #DC3545;
+    }
+
+    .question-card .child-heading {
+      font-size: 32px;
+    }
+
+    .question-card>input[type="radio"] {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      background-color: #DC3545;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container my-5 p-5 border shadow-sm rounded">
+    <div class="h2">Do you want to Review your website by our expert professionals ?</div>
+    <div class="mb-5">When your website is reviewed, it receives the prestigious "Trusted by Us" tag on the project. This significantly enhances the likelihood of your project being selected by clients.</div>
+    <div class="d-flex flex-wrap mb-3">
+        <div class="question-card d-flex justify-content-center align-items-center mr-5 mb-3" onclick="toggleCheckbox(this)">
+            <input class="" type="radio" name="question" id="question2">
+            <div class="d-flex flex-column align-items-center">
+                <div class="child-heading">Yes</div>
+                <div>Review my Project</div>
+            </div>
+        </div>
+      <div class="question-card d-flex justify-content-center align-items-center mb-3" onclick="toggleCheckbox(this)">
+        <input class="" type="radio" name="question" id="question1">
+        <div class="d-flex flex-column align-items-center w-50">
+            <div class="child-heading">No</div>
+            <div class="">put it directly on sale.</div>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <p>NOTE:</p>
+      <ul>
+        <li>Selecting "Review Option" incurs charges. Total pricing will be provided at the end of onboarding. You can skip this step now and add it later.</li>
+        <li>Having the "Trusted by Us" tag greatly increases your project's chances of being chosen by clients. This tag enhances trust between you and your clients.</li>
+      </ul>
+    </div>
+    <button class="btn btn-danger btn-lg">Next</button>
+  </div>
+
+  <script>
+    function toggleCheckbox(card) {
+      const checkbox = card.querySelector('.question-card input');
+      checkbox.checked = !checkbox.checked;
+      card.classList.toggle('selected', checkbox.checked);
+    }
+  </script>
+
+  <script src='http://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous'></script>
+  <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js' integrity='sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T' crossorigin='anonymous'></script>
+</body>
+
+</html>

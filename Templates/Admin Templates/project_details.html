@@ -8,10 +8,32 @@
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' integrity='sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB' crossorigin='anonymous'>
     <link rel='stylesheet' href='css/styles.css'>
     <title> Project Details </title>
+
+    <style>
+        .chat-circle-icon:hover{
+            color: white !important;
+        }
+        .chat-circle-icon{
+            color: "#28A745";
+        }
+    </style>
 </head>
 <body>
 
-    <div class="container mt-5">
+    <div class="container my-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="h4">Full Stack Web Application (like urbancompany) <sup class="text-success">open</sup></div>
+            <div class="d-flex">
+                <div class="d-flex flex-column align-items-center mr-5">
+                    <small class="text-muted mb-1">Bids</small>
+                    <div class="h5">23</div>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <small class="text-muted mb-1">Average Bids</small>
+                    <div class="h5"><i class="fa fa-sm fa-solid fa-indian-rupee-sign mr-1"></i>35,457 INR</div>
+                </div>
+            </div>
+        </div>
         <ul class="nav nav-tabs mb-3">
             <li class="nav-item">
                 <a class="nav-link text-dark active" aria-current="page" href="#details_tab">Details</a>
@@ -23,7 +45,7 @@
                 <a class="nav-link text-dark" href="#files_tab">Files</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#task_tab">Tasks</a>
+                <a class="nav-link text-dark" href="#status_tab">more</a>
             </li>
         </ul>
         <div id="details_tab" class="tab-pane fade show active">
@@ -59,7 +81,7 @@
 
                 </div>
                 <div class="col-md-3">
-                    <div class="border shadow-sm p-4">
+                    <!-- <div class="border shadow-sm p-4">
                         <div class="mb-4">
                             <div class="h6 mb-3">About the Client</div>
                             <div class="d-flex align-items-center"><i class="fa-solid fa-location-dot mr-2"></i> Ahmedabad</div>
@@ -73,7 +95,7 @@
                             <div class="d-flex align-items-center mb-2"><i class="fa-solid fa-user mr-2 text-success"></i> Profile completed</div>
                             <div class="d-flex align-items-center mb-2"><i class="fa-solid fa-phone mr-2 text-success"></i> Phone verified</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -114,7 +136,7 @@
                             <div class="mb-2">Replies within an hour</div>
                             <div class="d-flex">
                                 <button class="btn btn-outline-success w-100 mr-2 d-flex align-items-center justify-content-center">
-                                    <i style="font-size: 8px;" class="fa-solid fa-circle text-success mr-2"></i> Chat</button>
+                                    <i style="font-size: 8px;" class="fa-solid fa-circle mr-2 chat-circle-icon"></i> Chat</button>
                                 <button class="btn btn-success w-100">Assign</button>
                             </div>
                         </div>
@@ -156,7 +178,7 @@
                             <div class="mb-2">Replies within an hour</div>
                             <div class="d-flex">
                                 <button class="btn btn-outline-success w-100 mr-2 d-flex align-items-center justify-content-center">
-                                    <i style="font-size: 8px;" class="fa-solid fa-circle text-success mr-2"></i> Chat</button>
+                                    <i style="font-size: 8px;" class="fa-solid fa-circle mr-2 chat-circle-icon"></i> Chat</button>
                                 <button class="btn btn-success w-100">Assign</button>
                             </div>
                         </div>
@@ -198,7 +220,7 @@
                             <div class="mb-2">Replies within an hour</div>
                             <div class="d-flex">
                                 <button class="btn btn-outline-success w-100 mr-2 d-flex align-items-center justify-content-center">
-                                    <i style="font-size: 8px;" class="fa-solid fa-circle text-success mr-2"></i> Chat</button>
+                                    <i style="font-size: 8px;" class="fa-solid fa-circle mr-2 chat-circle-icon"></i> Chat</button>
                                 <button class="btn btn-success w-100">Assign</button>
                             </div>
                         </div>
@@ -240,7 +262,7 @@
                             <div class="mb-2">Replies within an hour</div>
                             <div class="d-flex">
                                 <button class="btn btn-outline-success w-100 mr-2 d-flex align-items-center justify-content-center">
-                                    <i style="font-size: 8px;" class="fa-solid fa-circle text-success mr-2"></i> Chat</button>
+                                    <i style="font-size: 8px;" class="fa-solid fa-circle mr-2 chat-circle-icon"></i> Chat</button>
                                 <button class="btn btn-success w-100">Assign</button>
                             </div>
                         </div>
@@ -249,12 +271,48 @@
             </div>
         </div>
 
-        <div id="files_tab" class="tab-pane fade d-none">
-            <h1>Files Tab</h1>
+        <div id="status_tab" class="tab-pane fade d-none">
+            <div class="p-4">
+                <div class="mb-4">
+                    <div class="my-3" style="font-size: 20px;">Status Manager</div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Order Placed
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Hosting Started
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Project Completed
+                        </label>
+                    </div>
+                </div>
+                <button class="btn btn-danger"><span class="mr-1">Delete Project</span> <i class="fa fa-trash"></i></button>
+            </div>
         </div>
 
-        <div id="task_tab" class="tab-pane fade d-none">
-            <h1>Task Tab</h1>
+        <div id="files_tab" class="tab-pane fade d-none">
+            <div class="row p-4">
+                <div class="col-6">
+                    <p class="mb-0">Upload all the relevant files for Hoster (.zip)</p>
+                    <small class="text-muted mb-3"></small>
+                    <div class=" mt-3">
+                        <label for="zip_file" class="border py-4 d-flex flex-column align-items-center border border-dark rounded" style="cursor: pointer;">
+                            <i class="fa-3x fa fa-solid fa-file"></i>
+                            <span class="text-success" id="zip_fileName"></span>
+                            <input class="d-none" name="zip_file" id="zip_file" type="file" accept="application/zip">
+                        </label>
+                    </div>
+                    <small class="text-muted">max file size = 20Mb</small>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -288,8 +346,31 @@
                 });
             });
         });
-    </script>
 
+
+
+        // Validation of file type and file size for source code
+        let src_code = document.querySelector('#zip_file')
+        let zip_fileName = document.querySelector("#zip_fileName")    // this is the green text which is displayed when we select a file
+
+        src_code.addEventListener('change', function(){
+            let mb = 1048576
+            let file = src_code.files[0]
+            if(file.size > 20*mb){
+                alert("please keep file size under 20MB. Current File Size " + Math.ceil(file.size/mb) + "MB")
+                src_code.value = "";
+                zip_fileName.innerText = "";
+            }
+            else if(file.type != "application/x-zip-compressed"){
+                alert('File type not Supported')
+                src_code.value = "";
+                zip_fileName.innerText = "";
+            }
+            else{
+                zip_fileName.innerText = file.name;
+            }
+        });
+    </script>
 
 </body>
 </html>

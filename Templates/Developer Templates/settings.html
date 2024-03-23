@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' integrity='sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==' crossorigin='anonymous' referrerpolicy='no-referrer' />
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' integrity='sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB' crossorigin='anonymous'>
+    <link rel='stylesheet' href='../../css/hosting_status.css'>
+    <title>  </title>
+    <style>
+        .settings-container{
+            width: 90%;
+            margin: auto;
+        }
+        .list-item{
+            list-style-type: none;
+        }
+
+        .list-item a{
+            text-decoration: none;
+            color: #676767;
+        }
+        .list-item a:hover{
+            color: black;
+        }
+        .list-item a:visited {
+            color: black;
+        }
+        .headings{
+            font-size: 24px;
+        }
+
+        /* Skill Set */
+        .skill-tag-close {
+        cursor: pointer;
+        color: black;
+        font-size:20px;
+        margin-left: 5px;
+        cursor: pointer;
+        }
+
+        .skill-tag-close:hover {
+        color: #999;
+        }
+
+        .form-control:focus{
+            outline: none ;
+            box-shadow:none !important;
+        }
+</style>
+</head>
+<body>
+
+    <div class="settings-container p-4 my-5">
+        <div class="row">
+            <div class="col-3">
+                <ul class="mb-0 p-4 border rounded">
+                    <li class="list-item py-2 px-3" style="cursor: pointer;"><a class="" href="#subscription_plan"><i class="fa-solid fa-user-plus mr-2"></i><span>Subscription Plan</span></a></li>
+                    <li class="list-item py-2 px-3" style="cursor: pointer;"><a class="" href="#profile"><i class="fa-solid fa-user mr-2"></i><span>My Profile</span></a></li>
+                    <li class="list-item py-2 px-3" style="cursor: pointer;"><a class="" href="#contact_info"><i class="fa-solid fa-comments mr-2"></i><span>Contact Info</span></a></li>
+                    <li class="list-item py-2 px-3" style="cursor: pointer;"><a class="" href="#hosting_status"><i class="fa-solid fa-cloud mr-2"></i><span>Hosting Status</span></a></li>
+                    <li class="list-item py-2 px-3" style="cursor: pointer;"><a class="" href="#review_status"><i class="fa-solid fa-file-pen mr-2"></i><span>Review Status</span></a></li>
+                    <li class="list-item py-2 px-3" style="cursor: pointer;"><a class="" href="#verifications"><i class="fa-solid fa-circle-check mr-2"></i><span>Developer Verifications</span></a></li>
+                    <!-- <li class="list-item py-2 px-3" style="cursor: pointer;"><a class="" href="#"><i class="fa-solid fa-user-check mr-2"></i><span>Complete Porfile</span></a></li> -->
+                </ul>
+            </div>
+            <div class="col-9" id="display_sections">
+                <section id="subscription_plan" class="p-4 border rounded">
+                    <div class="mb-3 headings">Subscription Plan</div>
+                    <div class="d-flex">
+                        <div class="d-flex flex-column align-items-center p-5 border mr-5">
+                            <span class="mb-1" style="font-size: 20px;">Current Plan</span>
+                            <span class="mb-3" style="font-size: 16px;">Basic Plan</span>
+                            <div><button class="btn btn-outline-info">Change Plan</button></div>
+                        </div>
+                        <div class="d-flex flex-column  align-items-center p-5 border">
+                            <span class="mb-1" style="font-size: 20px;">Available Credits</span>
+                            <span class="mb-3" style="font-size: 30px;">83</span>
+                            <div><button class="btn btn-outline-info">Increase Credits</button></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="profile" class="p-4 border rounded">
+                    <div class="mb-3 headings">My Profile</div>
+                    <div class="d-flex flex-column mb-4">
+                        <label for="">Title</label>
+                        <input type="text" class="form-control" placeholder="software developer | programmer | web developer | cloud architect">
+                    </div>
+                    <div class="d-flex flex-column mb-4">
+                        <label for="">Date of Birth</label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <div class="d-flex flex-column mb-4">
+                        <label for="">Profile Image</label>
+                        <input type="file" class="form-control">
+                    </div>
+                    <div class="d-flex flex-column mb-4">
+                        <label for="">Bio</label>
+                        <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+                    </div>
+
+                    <div class="d-flex flex-column mb-4">
+                        <label for="">Experience</label>
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="d-flex flex-column mb-4">
+                        <label for="">Skill Set</label>
+                        <input type="text" class="form-control" id="skills" placeholder="Enter skill and press enter">
+                        <div class="d-inline-flex flex-wrap align-items-center " id="skill-tags"></div>
+                    </div>
+                    <!-- <div class="d-flex flex-column mb-3">
+                        <label for="">Certifications</label>
+                        <input class="form-control" type="text">
+                    </div> -->
+                    <!-- <div class="d-flex flex-column mb-3">
+                        <label for="">testimonials</label>
+                        <input class="form-control" type="text">
+                    </div> -->
+                    <div class="d-flex flex-column mb-3">
+                        <label for="">Link Accounts</label>
+                        <input class="form-control mb-2" type="text" placeholder="enter your github profile url">
+                        <input class="form-control" type="text" placeholder="enter your linkedin profile url">
+                    </div>
+                    <!-- <div class="d-flex flex-column mb-3">
+                        <label for="">Language</label>
+                        <input class="form-control" type="text" placeholder="hindi, english">
+                    </div> -->
+                    <button class="btn btn-info">Save</button>
+                </section>
+
+                <section id="contact_info" class="p-4 border rounded">
+                    <div class="mb-3 headings">Contact Information</div>
+                    <div class="d-flex flex-column mb-2">
+                        <label for="">User ID</label>
+                        <input class="form-control" type="text" readonly>
+                    </div>
+                    <div class="d-flex flex-column mb-2">
+                        <label for="">Email ID</label>
+                        <input class="form-control" type="number" placeholder="example@gmail.com">
+                    </div>
+                    <div class="d-flex flex-column mb-2">
+                        <label for="">Phone Number</label>
+                        <input class="form-control" type="email" placeholder="9998887777">
+                    </div>
+                    <div class="d-flex flex-column mb-2">
+                        <label for="">address</label>
+                        <textarea class="form-control" name="" id="" cols="30" rows="5" placeholder="enter your address here..."></textarea>
+                    </div>
+                    <button class="btn btn-info">Save</button>
+                </section>
+
+                <section id="hosting_status" class="p-4 border rounded">
+                    <div class="border p-4 rounded my-3">
+                        <div class="d-flex flex-column">
+                            <a href="project_details.html" class="text-dark" style="text-decoration: none;">
+                                <div class="d-flex justify-content-between">
+                                    <div class="project-title h4">Full Stack Web Application (like urbancompany) </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="text-muted">Project Cost - <i class="fa fa-sm fa-solid fa-indian-rupee-sign mr-1"></i>12,500 INR</div>
+                                </div>
+                                <div class="my-4">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam maxime repellat aut recusandae, sunt ipsam ad dolorem ipsa ex dicta iste dolorum mollitia fugiat laudantium nihil nulla illum quas eos tenetur placeat voluptates. Labore nulla omnis aut, blanditiis inventore architecto neque animi, tenetur dolorum reprehenderit eos sapiente et quos velit...
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-wrap">
+                                        <p class="mr-3 mb-0 d-flex align-items-center" style="font-size: 15px;"><i
+                                                style="font-size: 8px;" class="mr-1 fa fa-solid fa-circle"></i> HTML</p>
+                                        <p class="mr-3 mb-0 d-flex align-items-center" style="font-size: 15px;"><i
+                                                style="font-size: 8px;" class="mr-1 fa fa-solid fa-circle"></i> CSS</p>
+                                        <p class="mr-3 mb-0 d-flex align-items-center" style="font-size: 15px;"><i
+                                                style="font-size: 8px;" class="mr-1 fa fa-solid fa-circle"></i> JS</p>
+                                        <p class="mr-3 mb-0 d-flex align-items-center" style="font-size: 15px;"><i
+                                                style="font-size: 8px;" class="mr-1 fa fa-solid fa-circle"></i> Bootstrap
+                                        </p>
+                                        <p class="mr-3 mb-0 d-flex align-items-center" style="font-size: 15px;"><i
+                                                style="font-size: 8px;" class="mr-1 fa fa-solid fa-circle"></i> Django</p>
+                                        <p class="mr-3 mb-0 d-flex align-items-center" style="font-size: 15px;"><i
+                                                style="font-size: 8px;" class="mr-1 fa fa-solid fa-circle"></i> MySQL</p>
+                                    </div>
+                                    <div class="text-muted ml-auto">6 minutes ago</div>
+                                </div>
+                            </a>
+                            <div class="mt-3 d-flex flex-wrap">
+                                <a href="../hosting_pricing_plan.html" class="btn btn-success d-flex align-items-center justify-content-center">
+                                    <span class="mr-2">Apply for Hosting</span> <i class="fa fa-paper-plane"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border p-4 rounded my-3">
+                        <div class="d-flex flex-column">
+                            <a href="project_details.html" class="text-dark" style="text-decoration: none;">
+                                <div class="d-flex justify-content-between">
+                                    <div class="project-title h4">Full Stack Web Application (like urbancompany) </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="text-muted">Project Cost - <i class="fa fa-sm fa-solid fa-indian-rupee-sign mr-1"></i>12,500 INR</div>
+                                </div>
+                                <div class="my-4">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam maxime repellat aut recusandae, sunt ipsam ad dolorem ipsa ex dicta iste dolorum mollitia fugiat laudantium nihil nulla illum quas eos tenetur placeat voluptates. Labore nulla omnis aut, blanditiis inventore architecto neque animi, tenetur dolorum reprehenderit eos sapiente et quos velit...
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-wrap">
+                                        <p class="mr-3 mb-0 d-flex align-items-center" style="font-size: 15px;"><i
+                                                style="font-size: 8px;" class="mr-1 fa fa-solid fa-circle"></i> HTML</p>
+                                        <p class="mr-3 mb-0 d-flex align-items-center" style="font-size: 15px;"><i
+                                                style="font-size: 8px;" class="mr-1 fa fa-solid fa-circle"></i> CSS</p>
+                                        <p class="mr-3 mb-0 d-flex align-items-center" style="font-size: 15px;"><i
+                                                style="font-size: 8px;" class="mr-1 fa fa-solid fa-circle"></i> JS</p>
+                                        <p class="mr-3 mb-0 d-flex align-items-center" style="font-size: 15px;"><i
+                                                style="font-size: 8px;" class="mr-1 fa fa-solid fa-circle"></i> Bootstrap
+                                        </p>
+                                        <p class="mr-3 mb-0 d-flex align-items-center" style="font-size: 15px;"><i
+                                                style="font-size: 8px;" class="mr-1 fa fa-solid fa-circle"></i> Django</p>
+                                        <p class="mr-3 mb-0 d-flex align-items-center" style="font-size: 15px;"><i
+                                                style="font-size: 8px;" class="mr-1 fa fa-solid fa-circle"></i> MySQL</p>
+                                    </div>
+                                    <div class="text-muted ml-auto">6 minutes ago</div>
+                                </div>
+                            </a>
+                            <div class="mt-3 d-flex flex-wrap">
+                                <a href="../Client Templates/hosting_status_timeline.html" class="btn btn-success d-flex align-items-center justify-content-center">
+                                    <span class="mr-2">Show Hosting Status</span> <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="review_status" class="p-4 border rounded">
+                    <ul class="review nav nav-tabs">
+                        <li class="nav-item">
+                          <a class="nav-link text-dark active" aria-current="page" href="#pending_review">Pending Review</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="#under_review">Under Review</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="#project_approved">Approved</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="#project_rejected">Rejected</a>
+                        </li>
+                      </ul>
+
+                      <div class="p-4">
+                          <div id="pending_review" class="tab-pane show">
+                              Project Review Pending
+                          </div>
+                          <div id="under_review" class="tab-pane fade d-none">
+                              List of Projects on Hold
+                          </div>
+                          <div id="project_approved" class="tab-pane fade d-none">
+                              List of Approved Projects
+                          </div>
+                          <div id="project_rejected" class="tab-pane fade d-none">
+                              List of Projects Rejected by our Tehnical Team
+                          </div>
+                      </div>
+                </section>
+
+                <section id="verifications">
+                    <div class="p-4 border ">
+                        <div class="row mb-2">
+                            <div class="col-md-3">Identity Verification </div>
+                            <div class="col-md-1"><i class="fa fa-circle-check text-success"></i></div>
+                            <div class="col-md-1"><button class="btn btn-outline-info">Verify Now</button></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-3">Payment Verification</div>
+                            <div class="col-md-1"><i class="fa fa-circle-check text-success"></i></div>
+                            <div class="col-md-1"><button class="btn btn-outline-info">Verify Now</button></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-3">Email Verification</div>
+                            <div class="col-md-1"><i class="fa fa-circle-check text-success"></i></div>
+                            <div class="col-md-1"><button class="btn btn-outline-info">Verify Now</button></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-3">Phone Verification </div>
+                            <div class="col-md-1"><i class="fa fa-circle-check text-success"></i></div>
+                            <div class="col-md-1"><button class="btn btn-outline-info">Verify Now</button></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src='http://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js' integrity='sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T' crossorigin='anonymous'></script>
+
+
+    <script>
+        const skillInput = document.getElementById("skills");
+        const skillTags = document.getElementById("skill-tags");
+
+        skillInput.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            const newSkill = skillInput.value.trim();
+            if (newSkill) {
+            const tag = document.createElement("span");
+            tag.classList.add("skill-tag", "m-2", "px-2", 'pb-1', "border", "rounded");
+            tag.innerText = newSkill;
+
+            // Create and append close icon
+            const closeIcon = document.createElement("span");
+            closeIcon.classList.add("skill-tag-close");
+            closeIcon.innerHTML = "&times;"; // Alternatively use Font Awesome for a cross icon
+            tag.appendChild(closeIcon);
+
+            closeIcon.addEventListener("click", function() {
+                tag.remove();
+            });
+
+            skillTags.appendChild(tag);
+            skillInput.value = "";
+            }
+        }
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const listItems = document.querySelectorAll(".list-item");
+            const sections = document.querySelectorAll("#display_sections section");
+            sections.forEach(function(section) {
+                if (section.id !== "subscription_plan") {
+                    section.style.display = "none";
+                }
+            });
+
+            listItems.forEach(function(item) {
+                item.addEventListener("click", function(event) {
+
+                    // Prevent default anchor behavior
+                    event.preventDefault();
+
+                    // Get the href attribute of the clicked anchor tag
+                    const targetId = item.querySelector("a").getAttribute("href").substring(1);
+
+                    // Hide all sections
+                    const sections = document.querySelectorAll("#display_sections section");
+                    sections.forEach(function(section) {
+                        section.style.display = "none";
+                    });
+
+                    // Show the target section
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.style.display = "block";
+                    }
+                });
+            });
+        });
+
+    </script>
+
+
+    <script>
+        $(document).ready(function(){
+            $('.review a').click(function(e){
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var tabs = document.querySelectorAll('.review a');
+
+            tabs.forEach(function(tab) {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var targetTab = document.querySelector(this.getAttribute('href'));
+                    var tabPanes = document.querySelectorAll('.tab-pane');
+
+
+                    tabPanes.forEach(function(pane) {
+                        console.log(pane)
+                        pane.classList.add('d-none');
+                    });
+
+                    targetTab.classList.remove('d-none');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
